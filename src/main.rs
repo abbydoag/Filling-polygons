@@ -19,8 +19,7 @@ fn main() {
 
 
     framebuffer.polygon(&[(165, 380), (185, 360), (180, 330), (207, 345), (233, 330), (230, 360), (250, 380), (220, 385), (205, 410), (193, 383)]);
-    let points2 = [(321, 335), (288, 286), (339, 251), (374, 302)];
-    framebuffer.polygon(&points2);
+    framebuffer.polygon(&[(321, 335), (288, 286), (339, 251), (374, 302)]);
  
 
     let _ = framebuffer.render_buffer("output.bmp");
