@@ -61,8 +61,4 @@ impl Polygon for Framebuffer {
             }
         }
     }
-    
-    
-
-
 }
