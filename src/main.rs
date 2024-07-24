@@ -37,6 +37,6 @@ fn main() {
     //relleno
     framebuffer.set_fill_color(0x00FFFF);
     framebuffer.filled_polygon(&points1);
-
+    
     let _ = framebuffer.render_buffer("output.bmp");
 }
