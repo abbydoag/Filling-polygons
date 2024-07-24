@@ -12,6 +12,7 @@ impl Polygon for Framebuffer {
         if points.len() < 3 {
             return;
         }
+        
 
         for i in 0..points.len() {
             let (x0, y0) = points[i];
@@ -26,6 +27,7 @@ impl Polygon for Framebuffer {
         if points.is_empty(){
             return
         }
+
         //bounding
         let min_y = points.iter().map(|p| p.y).fold(f32::INFINITY, f32::min) as usize;
         let max_y = points.iter().map(|p| p.y).fold(f32::NEG_INFINITY, f32::max) as usize;
@@ -56,6 +58,12 @@ impl Polygon for Framebuffer {
 
                     for x in x1..=x2{
                         self.point(x,y);
+
+                        if x == x1 || x == x2 {
+                            self.set_current_color(0xFFFFFF);
+                            self.point(x, y);
+                            self.set_current_color(0x00FFFF); //cambio de color
+                        }
                     }
                 }
             }
