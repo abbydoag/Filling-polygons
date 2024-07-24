@@ -17,8 +17,10 @@ fn main() {
 
     framebuffer.set_current_color(0xFFFFFF);
 
-    let points1 = [(165 ,380), (185, 360), (180, 330), (207, 345), (233, 330), (230, 360), (250, 380), (220, 385), (205, 410), (193, 383)];
-    framebuffer.polygon(&points1);
+
+    framebuffer.polygon(&[(165, 380), (185, 360), (180, 330), (207, 345), (233, 330), (230, 360), (250, 380), (220, 385), (205, 410), (193, 383)]);
+    let points2 = [(321, 335), (288, 286), (339, 251), (374, 302)];
+    framebuffer.polygon(&points2);
  
 
     let _ = framebuffer.render_buffer("output.bmp");
