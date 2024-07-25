@@ -5,7 +5,7 @@ pub struct Framebuffer {
     pub buffer: Vec<u32>,
     background_color: u32,
     current_color: u32,
-    fill_color: u32
+    pub fill_color: u32
 }
 
 impl Framebuffer {
@@ -41,5 +41,8 @@ impl Framebuffer {
     }
     pub fn set_fill_color(&mut self, color: u32){
         self.fill_color = color;
+    }
+    pub fn get_fill_color(&self) -> u32 {
+        self.fill_color
     }
 }
