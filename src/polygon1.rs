@@ -56,13 +56,15 @@ impl Polygon for Framebuffer {
 
                     for x in x1..=x2{
                         self.point(x,y);
+                        
+                        if x == x1 || x == x2 {
+                            self.set_current_color(0xFFFFFF);
+                            self.point(x, y);
+                            self.set_current_color(self.fill_color); //cambio de color
+                        }
                     }
                 }
             }
         }
     }
-    
-    
-
-
 }
