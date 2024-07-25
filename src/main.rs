@@ -89,6 +89,17 @@ fn main() {
     (597, 215), (552, 214), (517, 144), (466, 180)]);
     framebuffer.set_fill_color(0x00FF00);
     framebuffer.filled_polygon(&points4);
+    
+    let points5 = vec![
+        Vec3::new(682.0, 175.0, 0.0), 
+        Vec3::new(708.0, 120.0, 0.0), 
+        Vec3::new(735.0, 148.0, 0.0),
+        Vec3::new(739.0, 170.0, 0.0)
+    ];
+    framebuffer.set_current_color(0xFFFFFF);
+    framebuffer.polygon(&[(682, 175), (708, 120), (735, 148), (739, 170)]);
+    framebuffer.set_fill_color(0x000000);
+    framebuffer.filled_polygon(&points5);
 
     let _ = framebuffer.render_buffer("output.bmp");
 }
