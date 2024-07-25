@@ -42,7 +42,4 @@ impl Framebuffer {
     pub fn set_fill_color(&mut self, color: u32){
         self.fill_color = color;
     }
-    pub fn get_fill_color(&self) -> u32 {
-        self.fill_color
-    }
 }
